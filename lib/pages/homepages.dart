@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:notesapp_provider/models/note.dart';
 import 'package:notesapp_provider/models/notes_operation.dart';
+import 'package:notesapp_provider/pages/add_notes.dart';
 import 'package:provider/provider.dart';
 
 class HomePages extends StatelessWidget {
@@ -15,11 +16,14 @@ class HomePages extends StatelessWidget {
         centerTitle: true,
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {},
+        onPressed: () {
+          Navigator.push(
+              context, MaterialPageRoute(builder: (context) => const AddNotes()));
+        },
         child: const Icon(
           Icons.add,
           size: 30,
-          color: Colors.blueGrey,
+          color: Colors.white,
         ),
       ),
       body: Consumer<NotesOperation>(
