@@ -9,7 +9,7 @@ class NotesOperation with ChangeNotifier {
   }
 
   NotesOperation() {
-    addNewNote("Catatan Pertama", "diskripsi catatan pertama");
+    addNewNote('Catatan Pertama', 'diskripsi catatan pertama');
   }
 
   void addNewNote(String title, String description) {
