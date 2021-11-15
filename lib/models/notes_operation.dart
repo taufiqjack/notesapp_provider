@@ -1,18 +1,18 @@
 import 'package:flutter/material.dart';
-import 'package:notesapp_provider/pages/note.dart';
+import 'package:notesapp_provider/models/note.dart';
 
 class NotesOperation with ChangeNotifier {
   List<Note> notes = [];
-  
-  List <Note> get getNotes {
+
+  List<Note> get getNotes {
     return notes;
   }
 
-  NotesOperation(){
+  NotesOperation() {
     addNewNote("Catatan Pertama", "diskripsi catatan pertama");
   }
 
-  void addNewNote(String title, String description){
+  void addNewNote(String title, String description) {
     Note note = Note(title, description);
     notes.add(note);
     notifyListeners();
